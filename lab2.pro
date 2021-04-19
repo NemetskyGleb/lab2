@@ -7,4 +7,10 @@ SOURCES += \
         main.cpp
 
 HEADERS += \
-    unit.h
+    classunit.h \
+    codefactory.h \
+    codegenerator.h \
+    methodunit.h \
+    printoperatorunit.h \
+    unit.h \
+    units.h
