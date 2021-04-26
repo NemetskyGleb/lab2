@@ -23,6 +23,24 @@ public:
     }
 };
 
+class CSharpPrintOperatorUnit : public PrintOperatorUnit {
+private:
+    std::string m_text;
+public:
+    explicit CSharpPrintOperatorUnit(const std::string& text) : m_text(text) { }
+    std::string compile(unsigned int level = 0) const {
+        return generateShift(level) + "Console.WriteLine(\"" + m_text + "\");\n";
+    }
+};
 
+class JavaPrintOperatorUnit : public PrintOperatorUnit {
+private:
+    std::string m_text;
+public:
+    explicit JavaPrintOperatorUnit(const std::string& text) : m_text(text) { }
+    std::string compile(unsigned int level = 0) const {
+        return generateShift(level) + "System.out.println(\"" + m_text + "\");\n";
+    }
+};
 
 #endif // PRINTOPERATORUNIT_H
