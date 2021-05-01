@@ -24,6 +24,7 @@ private:
     std::vector<Fields> m_fields;
 public:
     enum AccessModifier {
+        DEFAULT,
         PUBLIC,
         PROTECTED,
         PRIVATE
@@ -152,7 +153,7 @@ public:
     enum Modifier {
         STATIC   = 1,
         ABSTRACT = 1 << 1,
-        FINAL    = 1 << 2
+        FINAL    = 1 << 3
     };
 public:
     explicit JavaClassUnit(const std::string name, ClassUnit::Flags modifier, ClassUnit::Flags access_modifier) : m_name(name)
@@ -203,7 +204,7 @@ public:
 };
 
 
-const std::vector<std::string> CPPClassUnit::ACCESS_MODIFIERS = { "public",
+const std::vector<std::string> CPPClassUnit::ACCESS_MODIFIERS = { "", "public",
             "protected", "private" };
             
 const std::vector<std::string> CSharpClassUnit::ACCESS_MODIFIERS = { "", "public",

@@ -25,9 +25,9 @@ private:
 public:
     enum Modifier {
         STATIC  = 1,
-        CONST   = 1 << 1,
-        VIRTUAL = 1 << 2
-    };
+        VIRTUAL = 1 << 1,
+        CONST   = 1 << 2
+        };
 public:
     /**
      * @brief Конструктор класса MethodUnit принимает
@@ -74,9 +74,9 @@ public:
     enum Modifier {
         STATIC   = 1,
         VIRTUAL  = 1 << 1,
-        OVERRIDE = 1 << 2,
-        SEALED   = 1 << 3,
-        ABSTRACT = 1 << 4
+        ABSTRACT = 1 << 3,
+        OVERRIDE = 1 << 4,
+        SEALED   = 1 << 5
     };
 public:
     /**
@@ -131,8 +131,8 @@ private:
 public:
     enum Modifier {
         STATIC   = 1,
-        ABSTRACT = 1 << 1,
-        FINAL    = 1 << 2
+        ABSTRACT = 1 << 3,
+        FINAL    = 1 << 6
     };
 public:
     /**
